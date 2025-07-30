@@ -12,6 +12,7 @@ Content-Type: application/json
 {
     "nombre": "Laptop Tuf Gaming",
     "precio": 4300000.3,
-    "stock": 15
+    "stock": 15,
+    "descripcion": "Es una laptop marca lenovo"
 }
 

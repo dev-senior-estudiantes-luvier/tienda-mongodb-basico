@@ -14,4 +14,5 @@ public class Producto {
     private String nombre;
     private Double precio;
     private Long stock;
+    private String descripcion;
 }
