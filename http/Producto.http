@@ -1,18 +1,38 @@
 #### Obtener todos los productos
 
-GET http://localhost:8080/api/productos
+GET http://localhost:8081/api/productos
 Accept: application/json
 
 
 ### Crear un nuevo producto
-
-POST http://localhost:8080/api/productos
+POST http://localhost:8081/api/productos
 Content-Type: application/json
 
 {
-    "nombre": "Laptop Tuf Gaming",
-    "precio": 4300000.3,
-    "stock": 15,
-    "descripcion": "Es una laptop marca lenovo"
+    "nombre": "Teclado Gamer Tech",
+    "precio": 50000.0,
+    "stock": 30,
+    "descripcion": "Teclado retro iluminado 50 teclas"
 }
+
+
+### Obetener por ID
+GET http://localhost:8081/api/productos/689a8a0e1f282333c95970a2
+
+
+### Actualizar producto por ID
+PUT http://localhost:8081/api/productos/689a8a0e1f282333c95970a2
+Content-Type: application/json
+
+{
+    "nombre": "Teclado Gamer Tech Pro",
+    "precio": 55000.0,
+    "stock": 25,
+    "descripcion": "Teclado retro iluminado 50 teclas con switches mecánicos"
+}
+
+
+### Eliminar por Id
+DELETE http://localhost:8081/api/productos/689a8a0e1f282333c95970a2
+
 
