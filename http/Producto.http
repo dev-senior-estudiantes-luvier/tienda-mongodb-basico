@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #### Obtener todos los productos
 
 GET http://localhost:8080/api/productos
@@ -6,12 +7,78 @@ Accept: application/json
 
 ### Crear un nuevo producto
 
+=======
+@productId = 68a4fbdcae541ee316e6f412
+
+### Obtener todos los productos
+GET http://localhost:8080/api/productos
+Accept: application/json
+
+###
+
+### Obtener un producto por ID
+GET http://localhost:8080/api/productos/12131
+Accept: application/json
+
+###
+
+### Crear un nuevo producto
+>>>>>>> ebbe15c (Primer commit)
 POST http://localhost:8080/api/productos
 Content-Type: application/json
 
 {
+<<<<<<< HEAD
     "nombre": "Laptop Tuf Gaming",
     "precio": 4300000.3,
     "stock": 15
 }
 
+=======
+  "name": "Laptop",
+  "price": 1500.0
+}
+
+###
+
+### Actualizar un producto (reemplaza {{productId}})
+PUT http://localhost:8080/api/productos/{{productId}}
+Content-Type: application/json
+
+{
+  "name": "Laptop actualizada",
+  "price": 1350.0
+}
+
+###
+
+### Eliminar un producto (reemplaza {{productId}})
+DELETE http://localhost:8080/api/productos/{{productId}}
+
+### Crear un nuevo producto(con mas variables)
+POST http://localhost:8080/api/productos
+Content-Type: application/json
+
+{
+  "name": "Monitor huawei 20",
+  "price": 650.0,
+  "stock": 10,  
+}
+
+### Obtener todos los productos
+GET http://localhost:8080/api/productos/falla/runtimeException
+Accept: application/json
+
+### Obtener todos los productos
+GET http://localhost:8080/api/productos/falla/exception
+Accept: application/json
+
+###
+PUT http://localhost:8080/api/productos/{{productId}}
+Content-Type: application/json
+
+{
+  "name": "Nuevo nombre 2",
+  "price": 1234.56
+}
+>>>>>>> ebbe15c (Primer commit)

@@ -1,6 +1,7 @@
 package com.devsenior.tienda_mongodb.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,13 +13,21 @@ import com.devsenior.tienda_mongodb.repository.ProductoRepository;
 public class ProductoService {
     
     @Autowired
-    private ProductoRepository productoRepository;
+    private ProductoRepository repo;
 
-    public List<Producto> listarTodos(){
-        return productoRepository.findAll();
+    public List<Producto> findAll() {
+        return repo.findAll();
     }
 
-    public Producto guardar(Producto producto){
-        return productoRepository.save(producto);
+    public Optional<Producto> findById(String id) {
+        return repo.findById(id);
+    }
+
+    public Producto save(Producto product) {
+        return repo.save(product);
+    }
+
+    public void delete(String id) {
+        repo.deleteById(id);
     }
 }
