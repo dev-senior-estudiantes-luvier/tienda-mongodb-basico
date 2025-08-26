@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-#### Obtener todos los productos
-
-GET http://localhost:8080/api/productos
-Accept: application/json
-
-
-### Crear un nuevo producto
-
-=======
 @productId = 68a4fbdcae541ee316e6f412
 
 ### Obtener todos los productos
@@ -23,18 +13,10 @@ Accept: application/json
 ###
 
 ### Crear un nuevo producto
->>>>>>> ebbe15c (Primer commit)
 POST http://localhost:8080/api/productos
 Content-Type: application/json
 
 {
-<<<<<<< HEAD
-    "nombre": "Laptop Tuf Gaming",
-    "precio": 4300000.3,
-    "stock": 15
-}
-
-=======
   "name": "Laptop",
   "price": 1500.0
 }
@@ -81,4 +63,3 @@ Content-Type: application/json
   "name": "Nuevo nombre 2",
   "price": 1234.56
 }
->>>>>>> ebbe15c (Primer commit)

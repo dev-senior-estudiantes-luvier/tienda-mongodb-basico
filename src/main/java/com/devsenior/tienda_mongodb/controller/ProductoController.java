@@ -1,6 +1,7 @@
 package com.devsenior.tienda_mongodb.controller;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -12,7 +13,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.devsenior.tienda_mongodb.mapper.ProductoMapper;
 import com.devsenior.tienda_mongodb.model.Producto;
+import com.devsenior.tienda_mongodb.model.dto.ProductoDTO;
 import com.devsenior.tienda_mongodb.service.ProductoService;
 
 @RestController
@@ -23,8 +26,9 @@ public class ProductoController {
     private ProductoService service;
 
     @GetMapping
-    public List<Producto> getAll() {
-        return service.findAll();
+    public List<ProductoDTO> getAll() {
+        
+        return service.findAll().stream().map(ProductoMapper::toDTO).collect(Collectors.toList());
     }
 
     @GetMapping("/{id}")
@@ -55,7 +59,7 @@ public class ProductoController {
 
     @GetMapping("/falla/runtimeException")
     public void arrojarErrorRuntimeException() {
-        throw new RuntimeException("Exception en en tiempo de ejecucion");
+        throw new RuntimeException("Exception en tiempo de ejecucion");
     }
 
     @GetMapping("/falla/exception")
